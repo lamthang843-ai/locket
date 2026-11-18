@@ -1,0 +1,8 @@
+#!name=Locket Gold Bypass
+#!desc=Kích hoạt Gold và Photo Booth
+
+[Script]
+locket_gold = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+|^https:\/\/api\.locket\.com\/.+$, script-path=THAY_LINK_RAW_JS_VÀO_ĐÂY, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.locket.com, api.revenuecat.com
